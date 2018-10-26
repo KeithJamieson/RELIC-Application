@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RELIC"
         mc:Ignorable="d"
-        Title="Please Register" Height="450" Width="800" HorizontalAlignment="Center">
+        Title="Please Register" Height="350" Width="800" HorizontalAlignment="Center">
     <Grid>
 
         <Grid.RowDefinitions>
@@ -17,26 +17,28 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
-        
-            <TextBlock Text="Please Register on the Application (You will need your AIRC ID)" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontFamily="Ariel" FontWeight="Bold" />
-        <!-- username -->
-        <TextBlock Text="Please Enter a username : " Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Left" FontFamily="Ariel"  />
-            <TextBox Height="26" Width="200" Name="tbxUsername" Grid.Row="2" Grid.Column="0" FontSize="20" FontFamily="Ariel" />
-        <!-- password -->
-        
-        <TextBlock Text="Please Enter a password : " Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Left" FontFamily="Ariel"  />
-        <TextBox Height="26" Width="200" Name="tbxPassword" Grid.Row="3" Grid.Column="0" FontSize="20" FontFamily="Ariel" />
-
-        <TextBlock Text="Please Enter your AIRC ID : " Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Left" FontFamily="Ariel"  />
-        <TextBox Height="26" Width="200" Name="tbxAIRC_ID" Grid.Row="4" Grid.Column="0" FontSize="20" FontFamily="Ariel" />
-
-        <TextBlock Text="Please select your Club : " Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Left" FontFamily="Ariel"  />
-        <ComboBox Height="26" Width="200" Name="cboRidingClub" Grid.Row="5" Grid.Column="0" FontSize="20" FontFamily="Ariel" />
-        <Button Name="btnRegister" Grid.Row="6" Grid.Column="1" Content="Register" Height="26" Width="100" HorizontalAlignment="Left" />
-        <Button Name="btnExit" Grid.Row="6" Grid.Column="2" Content="Exit" Height="26" Width="100" HorizontalAlignment="Right" />
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="500" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition MinWidth="250" />
+            <ColumnDefinition MinWidth="250" />
+            <ColumnDefinition MinWidth="100" />
+            <ColumnDefinition MinWidth="100" />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
+        <TextBlock Text="Please Register on the Application (You will need your AIRC ID)" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Center" FontFamily="Ariel" FontSize="20" FontWeight="Bold" Margin="100,0" Width="592" />
+        <!-- username -->
+        <TextBlock Text="Please Enter a username : "    Grid.Row="2"    Grid.Column="0"  FontFamily="Ariel" FontSize="20" HorizontalAlignment="Right"/>
+        <TextBox Name="tbxUsername"                     MinWidth="200"  Grid.Row="2" Grid.Column="1"  FontFamily="Ariel" FontSize="20" HorizontalAlignment="Right" />
+        <!-- password -->
+
+        <TextBlock Text="Please Enter a password : "    Grid.Row="3"    Grid.Column="0"  FontFamily="Ariel" FontSize="20" HorizontalAlignment="Right" />
+        <TextBox Name="tbxPassword" Grid.Row="3"        MinWidth="200"  Grid.Column="1" FontFamily="Ariel" FontSize="20" HorizontalAlignment="Right"  />
+        <!-- AIRC ID -->
+        <TextBlock Text="Please Enter your AIRC ID : "  Grid.Row="4"    Grid.Column="0" FontFamily="Ariel" FontSize="20" HorizontalAlignment="Right" />
+        <TextBox Name="tbxAIRC_ID"                      MinWidth="200"  Grid.Row="4" Grid.Column="1" FontFamily="Ariel" FontSize="20" HorizontalAlignment="Right" />
+        <!-- Club -->
+        <TextBlock Text="Please select your Club : "    Grid.Row="5" Grid.Column="0"  FontFamily="Ariel" FontSize="20" HorizontalAlignment="Right" />
+        <ComboBox Width="200" Name="cboRidingClub"      MinWidth="200"  Grid.Row="5" Grid.Column="1" FontFamily="Ariel" FontSize="20" HorizontalAlignment="Right"   />
+        <Button Name="btnRegister"  Grid.Row="6" Grid.Column="2" Content="Register" MinWidth="100" HorizontalAlignment="Right"  />
+        <Button Name="btnExit"      Grid.Row="6" Grid.Column="3" Content="Exit"     MinWidth="100" HorizontalAlignment="Left"  />
     </Grid>
 </Window>
